@@ -41,7 +41,7 @@ code.language-html,
 .token.selector,
 .token.tag,
 .token.punctuation {
-  color: white;
+  color: black;
 }
 
 .token.comment,

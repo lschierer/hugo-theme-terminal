@@ -15,7 +15,7 @@ body {
   font-size: 1rem;
   line-height: 1.54;
   letter-spacing: -0.02em;
-  background-color: color-mod(var(--accent) blend(#1D1E28 98%));
+  background-color: var(--background);
   color: var(--color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -292,7 +292,7 @@ mark {
   padding: 40px;
   max-width: 864px;
   min-height: 100vh;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid color-mod(var(--accent) a(40%));
 
   &.full,
   &.center {
