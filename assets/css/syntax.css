@@ -26,7 +26,7 @@ code.language-scss,
 .token.placeholder,
 .token.variable,
 .token.attr-name {
-  color: color-mod(var(--accent) a(70%));
+  color: color-mod(var(--accent) a(60%));
 }
 
 .token.property,
@@ -35,7 +35,7 @@ code.language-scss,
 code.language-javascript,
 code.language-html,
 .command-line-prompt > span:before {
-  color: color-mod(var(--accent) blend(#999 90%));
+  color: color-mod(var(--accent) blend(#999 80%));
 }
 
 .token.selector,
@@ -48,7 +48,7 @@ code.language-html,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: rgba(255, 255, 255, .3);
+  color: color-mod(var(--accent) blend(#999 70%));
 }
 
 .token.namespace {
@@ -65,7 +65,7 @@ pre[data-line] {
   right: 0;
   padding: 0;
   margin: 0;
-  background: color-mod(var(--accent) blend(#999 90%) a(8%));
+  background: color-mod(var(--accent) blend(#999 80%) a(8%));
   pointer-events: none;
   line-height: inherit;
   white-space: pre;
