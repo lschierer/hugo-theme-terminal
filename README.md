@@ -1,9 +1,6 @@
 # Terminal
 
 ![Terminal](https://github.com/rampadc/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
-
-### DEMO - https://congx.dev
-
 ---
 
 **NOTE**: This is a modified fork of Panr's original Terminal theme to add light variants. As such, there are breaking changes from Panr's theme and is a standalone repository. Only light colours can be used with confidence: `light_green`, `light_blue`, `light_pink`, `light_red` and `link_orange`. Until this theme is published on Hugo themes directory, you need to use this repository instead of Panr's.
