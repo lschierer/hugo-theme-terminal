@@ -1,17 +1,17 @@
 <nav class="menu">
   <ul class="menu__inner menu__inner--desktop">
     {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
-      {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+      {{ range first $.Site.Params.showMenuItems $.Site.Sections }}
         {{ if not .HasChildren }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
-      {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+      {{ if gt (len $.Site.Sections) $.Site.Params.showMenuItems }}
         <ul class="menu__sub-inner">
           <li class="menu__sub-inner-more-trigger">{{ $.Site.Params.MenuMore }} ▾</li>
 
           <ul class="menu__sub-inner-more hidden">
-            {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+            {{ range last (sub (len $.Site.Sections) $.Site.Params.showMenuItems) $.Site.Sections }}
               {{ if not .HasChildren }}
                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
@@ -20,7 +20,7 @@
         </ul>
       {{ end }}
     {{ else }}
-      {{ range $.Site.Menus.main }}
+      {{ range $.Site.Sections }}
         {{ if not .HasChildren }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
@@ -43,7 +43,7 @@
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
-    {{ range $.Site.Menus.main }}
+    {{ range $.Site.Sections }}
       {{ if not .HasChildren }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
