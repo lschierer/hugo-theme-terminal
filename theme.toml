@@ -10,3 +10,9 @@ min_version = 0.74
 [author]
   name = "lschierer"
   homepage = "https://www.schierer.org/~luke"
+
+[module]
+  [module.mounts]
+    source = "node_modules/mermaid/dist"
+    target = "assets/js/mermaid"
+
