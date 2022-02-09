@@ -1,6 +1,5 @@
 {{ if not (.Page.Scratch.Get "mermaid") }}
 <!-- Include mermaid only first time -->
-{{ $worker := resources.Get "js/myworker.js" | js.Build }}
 {{ $js := resources.Get "js/main.js" | js.Build "mermaid.min.js" }}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ with resources.Get "mermaid.json" }}
