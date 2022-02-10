@@ -27,7 +27,7 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-
+	
 }
 
 /* Code blocks */
@@ -213,7 +213,7 @@ pre[class*="language-"].line-numbers > code {
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid #999;
+	border-right: 1px solid color-mod(var(--accent) blend(black 90%) a(20%));
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -251,7 +251,7 @@ pre[class*="language-"].line-numbers > code {
 }
 
 .command-line-prompt > span:before {
-	color: #999;
+	color: color-mod(var(--accent) blend(black 90%) a(40%));
 	content: ' ';
 	display: block;
 	padding-right: 0.8em;

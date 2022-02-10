@@ -34,7 +34,7 @@ code.language-scss,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: color-mod(var(--accent) a(70%)) !important;
+  color: color-mod(var(--accent) a(60%));
 }
 
 .token.property,
@@ -44,20 +44,20 @@ code.language-scss,
 code.language-javascript,
 code.language-html,
 .command-line-prompt > span:before {
-  color: color-mod(var(--accent) blend(#999 90%)) !important;
+  color: color-mod(var(--accent) blend(#999 80%)) !important;
 }
 
 .token.selector,
 .token.tag,
 .token.punctuation {
-  color: white;
+  color: black;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: rgba(255, 255, 255, .3) !important;
+  color: color-mod(var(--accent) blend(#999 70%));
 }
 
 .token.namespace {
@@ -80,7 +80,7 @@ pre[class*="language-"] {
   right: 0;
   padding: 0;
   margin: 0;
-  background: color-mod(var(--accent) blend(#999 90%) a(8%));
+  background: color-mod(var(--accent) blend(#999 80%) a(8%));
   pointer-events: none;
   line-height: inherit;
   white-space: pre;

@@ -1,12 +1,9 @@
 # Terminal
 
-![Terminal](https://github.com/panr/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
-
-### DEMO - https://hugo-terminal.now.sh/
-
-<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
-
+![Terminal](https://github.com/rampadc/hugo-theme-terminal/blob/master/images/screenshot.png?raw=true)
 ---
+
+**NOTE**: This is a modified fork of Panr's original Terminal theme to add light variants. As such, there are breaking changes from Panr's theme and is a standalone repository. Only light colours can be used with confidence: `light_green`, `light_blue`, `light_pink`, `light_red` and `link_orange`. Until this theme is published on Hugo themes directory, you need to use this repository instead of Panr's.
 
 - [Features](#features)
 - [Built-in shortcodes](#built-in-shortcodes)
@@ -17,10 +14,6 @@
 - [Post archetype](#post-archetype)
 - [Add-ons](#add-ons)
 - [How to (safely) edit the theme](#how-to-edit)
-- [Found a bug?](#bug)
-- [New cool idea or feature](#feature)
-- [Terminal theme user?](#terminal-theme-user)
-- [Sponsoring](#sponsoring)
 - [Licence](#licence)
 
 ## Features
@@ -82,7 +75,7 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 
 ## How to start
 
-You can download the theme manually by going to [https://github.com/panr/hugo-theme-terminal.git](https://github.com/panr/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
+You can download the theme manually by going to [https://github.com/rampadc/hugo-theme-terminal.git](https://github.com/rampadc/hugo-theme-terminal.git) and pasting it to `themes/terminal` in your root directory.
 
 You can also clone it directly to your Hugo folder:
 
@@ -123,8 +116,8 @@ paginate = 5
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+  # ["light_orange", "light_blue", "light_red", "light_green", "light_pink"]
+  themeColor = "light_orange"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
@@ -254,40 +247,10 @@ yarn build
 
 To see the changes (remember to restart `hugo server`).
 
-## Found a bug? <a id="bug" />
-
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-terminal/issues) or create a new [Pull Request](https://github.com/panr/hugo-theme-terminal/pulls) to fix the issue.
-
-## New cool idea or feature? <a id="feature" />
-
-The theme is in constant development since 2019 and has got many cool features that helped many of you and made the theme better. But there were also many features that I wasn't sure about because I want to keep the theme as simple as possible.
-
-So, let's say you have an idea of how to extend the theme. That's cool and you're welcome to do that, just follow these steps:
-
-- fork the theme
-- implement the feature
-- write an instruction how to use the feature
-- give a working example of the implementation for other users
-- add info about your work to `COMMUNITY-FEATURES.md`
-- make a PR with edited `COMMUNITY-FEATURES.md`
-
-This will help keeping the theme close to its roots, and also allow anyone who wishes to improve it and match their needs, to do whatever they want.
-
-Sounds OK? Cool, let's rock! 🤘
-
-## Terminal theme user?
-
-I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-terminal/blob/master/USERS.md)! 🤗
-
-## Sponsoring
-
-If you like my work and want to support the development of the project, now you can! Just:
-
-<a href="https://www.buymeacoffee.com/panr" target="_blank"><img src="https://res.cloudinary.com/panr/image/upload/v1579374705/buymeacoffee_y6yvov.svg" alt="Buy Me A Coffee" ></a>
-
 ## License
 
 Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019-2021 Radosław Kozieł ([@panr](https://twitter.com/panr)), Cong Nguyen ([@congxdev](https://twitter.com/congxdev))
 Copyright © 2022 Luke Schierer ((lschierer)(https://www.schierer.org/~luke))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
