@@ -50,3 +50,47 @@
     {{ end }}
   </ul>
 </nav>
+
+<nav class="sidebar-nav">
+	<ul class="sidebar-nav">
+    {{ $currentPage := . }}
+		{{ $TopSection := .FirstSection }}
+		{{ $curMenu := slice "" }}
+		{{ range $r := .FirstSection.Sections.ByTitle }}
+			{{ if and $r.IsSection (not .Params.hidden) }}
+				{{ $sect := $r.CurrentSection }}
+				{{ if (not (in $curMenu $r)) }}
+					{{ $curMenu = $curMenu | append $r }}
+  	  		<li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+					{{ range $s := $r.Sections.ByTitle}} 
+						{{ if (not (in $curMenu $s)) }}
+							{{ $curMenu = $curMenu | append $s }}
+							<li><a href="{{ $s.Permalink }}">{{ $s.Params.title | humanize | title }}</a></li>
+						{{ end}}
+					{{ end }}
+				{{ end }}
+				<ul>
+					{{ range $p := .Site.Pages }}
+						{{ if (not (in $curMenu $p)) }}
+							{{ if not $p.IsSection }}
+								{{ if and ($sect.IsAncestor $p) (not (eq $sect $p)) }}
+									{{$curMenu = $curMenu | append $p }}
+	    						<li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+								{{ end }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				</ul>
+			{{ end }}
+		{{ end }}
+		{{ range $p := .Site.Pages }}
+			{{ if (not (in $curMenu $p)) }}
+				{{ if not $p.IsSection }}
+					{{ if and ($TopSection.IsAncestor $p) (not (eq $TopSection $p)) }}
+						<li><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></li>
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	</ul>
+</nav>
