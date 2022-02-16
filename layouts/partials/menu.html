@@ -56,7 +56,8 @@
     {{ $currentPage := . }}
 		{{ $TopSection := .FirstSection }}
 		{{ $curMenu := slice "" }}
-		{{ range $r := .FirstSection.Sections.ByTitle }}
+		{{ range $r := cond (eq .Params.ListByWeight true) .FirstSection.Sections.ByWeight .FirstSection.Sections.ByTitle }}
+		{{/* range $r := .FirstSection.Sections.ByTitle */}}
 			{{ if and $r.IsSection (not .Params.hidden) }}
 				{{ $sect := $r.CurrentSection }}
 				{{ if (not (in $curMenu $r)) }}
@@ -70,7 +71,7 @@
 					{{ end }}
 				{{ end }}
 				<ul>
-					{{ range $p := .Site.Pages }}
+					{{ range $p := cond (eq .Params.ListByWeight true) .Site.Pages.ByWeight .Site.Pages.ByTitle }}
 						{{ if (not (in $curMenu $p)) }}
 							{{ if not $p.IsSection }}
 								{{ if and ($sect.IsAncestor $p) (not (eq $sect $p)) }}
@@ -83,7 +84,7 @@
 				</ul>
 			{{ end }}
 		{{ end }}
-		{{ range $p := .Site.Pages }}
+		{{ range $p := cond (eq .Params.ListByWeight true) .Site.Pages.ByWeight .Site.Pages.ByTitle }}
 			{{ if (not (in $curMenu $p)) }}
 				{{ if not $p.IsSection }}
 					{{ if and ($TopSection.IsAncestor $p) (not (eq $TopSection $p)) }}
